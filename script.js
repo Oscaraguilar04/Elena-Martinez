@@ -123,9 +123,17 @@
     );
 
     document.querySelectorAll(".reveal").forEach(function (el, index) {
-      el.style.transitionDelay = Math.min(index % 3, 2) * 80 + "ms";
+      el.style.transitionDelay = Math.min(index % 3, 2) * 40 + "ms";
       revealObserver.observe(el);
     });
+    window.setTimeout(function () {
+      document.querySelectorAll(".reveal").forEach(function (el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add("is-visible");
+        }
+      });
+    }, 120);
   } else {
     document.querySelectorAll(".reveal").forEach(function (el) {
       el.classList.add("is-visible");

@@ -5,8 +5,8 @@
   --sage: #5f7f66;
   --sage-deep: #4a6550;
   --sage-wash: #e4ede4;
-  --clay: #c36b4a;
-  --clay-deep: #a85638;
+  --clay: #9a4a30;
+  --clay-deep: #7e3c26;
   --ink: #2b2924;
   --muted: #5e5a53;
   --line: #d9d1c4;
@@ -521,7 +521,7 @@ textarea:focus-visible,
   padding-bottom: 0;
 }
 
-.buyer-timeline li::before {
+.buyer-timeline .step-num::before {
   counter-increment: buy-step;
   content: counter(buy-step);
   position: absolute;
@@ -671,7 +671,7 @@ textarea:focus-visible,
   flex-direction: column;
   justify-content: flex-end;
   padding: 1.4rem 1.25rem 1.3rem;
-  background: linear-gradient(180deg, rgba(43, 41, 36, 0.05) 20%, rgba(43, 41, 36, 0.78) 100%);
+  background: linear-gradient(180deg, rgba(43, 41, 36, 0.12) 15%, rgba(43, 41, 36, 0.82) 100%);
 }
 
 .hood-tag {
@@ -732,7 +732,7 @@ textarea:focus-visible,
   border-bottom: 0;
 }
 
-.seller-path li::before {
+.seller-path .step-num::before {
   counter-increment: sell-step;
   content: counter(sell-step);
   position: absolute;
@@ -1114,7 +1114,7 @@ label.is-error textarea {
 .reveal {
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+  transition: opacity 0.4s var(--ease), transform 0.4s var(--ease);
 }
 
 .reveal.is-visible {
@@ -1217,6 +1217,11 @@ label.is-error textarea {
 
 
 @media (max-width: 759px) {
+  .portrait-frame {
+    aspect-ratio: 4 / 4.05;
+    max-height: 320px;
+  }
+
   .hero-copy h1 {
     font-size: clamp(1.95rem, 8.2vw, 2.45rem);
   }
@@ -1243,4 +1248,17 @@ label.is-error textarea {
   .section-intro {
     margin-bottom: 1.5rem;
   }
+}
+
+.seller .seller-copy > p {
+  color: #3f3b35;
+}
+
+.guide-form .btn-primary {
+  background: #f7f3ec;
+  color: #3d5342;
+}
+.guide-form .btn-primary:hover {
+  background: #fff;
+  color: #2b2924;
 }
