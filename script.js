@@ -194,7 +194,7 @@
       }
 
       statusEl.classList.remove("is-error");
-      statusEl.textContent = successText;
+      statusEl.textContent = "";
       form.reset();
       fields.forEach(function (name) {
         var input = form.elements.namedItem(name);
@@ -202,6 +202,10 @@
       });
       var pills = form.querySelector(".intent-pills");
       if (pills) pills.classList.remove("is-error");
+      var host = form.closest(".guide-card") || form;
+      host.classList.add("is-complete");
+      var success = document.getElementById(form.id === "guide-form" ? "guide-success" : "contact-success");
+      if (success) success.hidden = false;
     });
 
     form.querySelectorAll("input, textarea").forEach(function (input) {
@@ -218,16 +222,15 @@
   bindForm(
     contactForm,
     formStatus,
-    "Thanks — Elena will follow up to find a time that works.",
+    "Thanks — Elena will be in touch shortly.",
     ["name", "email", "phone", "intent", "message"]
   );
 
   bindForm(
     guideForm,
     guideStatus,
-    "Guide sent. Check your inbox for 7 Things to Know Before Buying Your First Sacramento Home.",
+    "Thanks! Your guide is ready.",
     ["guide-name", "guide-email"]
   );
 
-  void intentField;
 })();
