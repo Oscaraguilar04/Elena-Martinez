@@ -512,13 +512,17 @@ textarea:focus-visible,
   border-left: 2px solid #b7cbb9;
 }
 
-.buyer-timeline li {
+.buyer-timeline .process-step {
   position: relative;
   padding: 0 0 1.35rem 1rem;
 }
 
-.buyer-timeline li:last-child {
+.buyer-timeline .process-step:last-child {
   padding-bottom: 0;
+}
+
+.step-num {
+  speak: never;
 }
 
 .buyer-timeline .step-num::before {
@@ -720,7 +724,7 @@ textarea:focus-visible,
   gap: 0;
 }
 
-.seller-path li {
+.seller-path .process-step {
   position: relative;
   display: grid;
   gap: 0.2rem;
@@ -728,7 +732,7 @@ textarea:focus-visible,
   border-bottom: 1px solid rgba(195, 107, 74, 0.22);
 }
 
-.seller-path li:last-child {
+.seller-path .process-step:last-child {
   border-bottom: 0;
 }
 
@@ -1095,8 +1099,11 @@ label.is-error textarea {
 }
 
 .footer-disclaimer {
-  margin-top: 0.7rem;
-  max-width: 36rem;
+  margin-top: 0.15rem;
+  max-width: 28rem;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: #8d8478;
 }
 
 .site-footer nav {
