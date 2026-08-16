@@ -18,17 +18,20 @@ Open `index.html` locally, or use the VS Code Live Server extension.
 ├── styles.css
 ├── script.js
 ├── assets/
+├── portfolio/
 └── README.md
 ```
 
-## Portfolio screenshots to capture
+## Portfolio screenshots
 
-1. Desktop hero (portrait + next-chapter headline)
-2. Featured homes
-3. Neighborhood explorer
-4. Mobile (~390px) hero or contact form
+Concept site — not a real client. Label: **Residential Real Estate Website Concept**.
 
-Label every shot: **Residential Real Estate Website Concept**.
+| Shot | File |
+| --- | --- |
+| Desktop hero | `portfolio/desktop-hero.png` |
+| Featured homes | `portfolio/featured-homes.png` |
+| Neighborhood explorer | `portfolio/neighborhoods.png` |
+| Mobile (~390px) | `portfolio/mobile.png` |
 
 ## Brand
 

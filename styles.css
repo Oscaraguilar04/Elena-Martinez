@@ -316,8 +316,10 @@ textarea:focus-visible,
   height: 44px;
   border: 0;
   background: transparent;
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 5px;
   padding: 0;
 }
@@ -351,6 +353,10 @@ textarea:focus-visible,
   border-bottom: 1px solid var(--line);
 }
 
+.mobile-nav[hidden] {
+  display: none;
+}
+
 .mobile-nav a {
   padding: 0.75rem 0.4rem;
   font-weight: 600;
@@ -364,11 +370,16 @@ textarea:focus-visible,
 
 .hero {
   padding: 2rem 0 3.5rem;
+  overflow: hidden;
 }
 
 .hero-grid {
   display: grid;
   gap: 2rem;
+}
+
+.hero-portrait {
+  order: -1;
 }
 
 .hero-copy .lede {
@@ -396,7 +407,7 @@ textarea:focus-visible,
 .hero-portrait::before {
   content: "";
   position: absolute;
-  inset: 12% -8% -8% 12%;
+  inset: 10% 0 -6% 10%;
   background: var(--sage-wash);
   border-radius: 28px;
   z-index: 0;
@@ -616,6 +627,7 @@ textarea:focus-visible,
 
 .neighborhoods {
   padding: 1rem 0 4rem;
+  overflow: hidden;
 }
 
 .hood-mosaic {
@@ -1083,6 +1095,10 @@ label.is-error textarea {
     grid-template-columns: 1.05fr 0.95fr;
     align-items: center;
     gap: 3rem;
+  }
+
+  .hero-portrait {
+    order: 0;
   }
 
   .trust-stats {
